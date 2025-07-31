@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - Lambspun Florals</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+		<a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="intro" style="text-align: center; margin-bottom: 2rem;">
+      <h1>Shop Handmade Crochet Florals</h1>
+      <p>Timeless, handmade floral creations by Sarah Lamb</p>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <a href="lavender.html">
+          <img src="images/lavender-bundle.png" alt="Lavender Bundle">
+          <h2>Lavender Bundle</h2>
+          <p class="price">$25.00</p>
+		  </a>
+		  <form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="Lavender Bundle">
+  <input type="hidden" name="price" value="25.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+
+        
+      </div>
+
+      <div class="product-card">
+        <a href="single-rose.html">
+          <img src="images/single-rose.png" alt="1 Rose with Stem">
+          <h2>Single Rose with Stem</h2>
+          <p class="price">$10.00</p>
+		  </a>
+        <form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="Single Rose with Stem">
+  <input type="hidden" name="price" value="10.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+		
+      </div>
+	  
+      <div class="product-card">
+        <a href="roses-3-stem.html">
+          <img src="images/3-rose-bundle1.png" alt="3 Roses with Stems">
+          <h2>3 Rose Bundle with Stems</h2>
+          <p class="price">$25.00</p>
+		 </a>
+        <form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="3 Roses with Stems">
+  <input type="hidden" name="price" value="25.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+
+      </div>
+	  
+	  <div class="product-card">
+        <a href="roses-5-stem.html">
+          <img src="images/5-rose-bundle1.png" alt="5 Roses with Stems">
+          <h2>5 Rose Bundle with Stems</h2>
+          <p class="price">$45.00</p>
+		 </a>
+        <form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="5 Roses with Stems">
+  <input type="hidden" name="price" value="45.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+		
+      </div>
+
+      <div class="product-card">
+        <a href="keepsake-dozen.html">
+          <img src="images/keepsake-dozen.png" alt="The Keepsake Dozen">
+          <h2>The Keepsake Dozen</h2>
+          <p class="price">$110.00</p>
+        </a>
+		<form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="The Keepsake Dozen">
+  <input type="hidden" name="price" value="110.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+      </div>
+
+      <div class="product-card">
+        <a href="leafy-stems.html">
+          <img src="images/leafy-stems.png" alt="Leafy Stems">
+          <h2>Leafy Stems</h2>
+          <p class="price">$8.00</p>
+        </a>
+		<form action="add_to_cart.php" method="post">
+  <input type="hidden" name="product_name" value="Leafy Stems">
+  <input type="hidden" name="price" value="8.00">
+  <input type="number" name="quantity" value="1" min="1">
+  <button type="submit">Add to Cart</button>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

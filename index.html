@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lambspun Florals - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+	    <a href="dashboard.php">Dashboard</a>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+		<a href="contact.html">Contact</a>
+		<a href="logout.php">Logout</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="intro" style="text-align: center; margin-bottom: 2rem;">
+      <h1>Welcome to Lambspun Florals</h1>
+      <p>Everlasting blooms handcrafted with love by Sarah Lamb.</p>
+      <p>Explore our shop for handmade crochet roses, lavender, and more — lovingly made one stitch at a time.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* style.css */
+
+/* Reset and base */
+* {
+  margin: 5%%;
+  padding: 0.5%;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #5e434b;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: #3c2f32;
+  background-color: #fffaf9;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 3px solid #caa;
+}
+
+/* Header + Nav */
+.site-header {
+  background-color: #fff0f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e0c0d0;
+}
+
+.brand a {
+  font-family: 'Satisfy', cursive;
+  font-size: 2.6rem;
+  color: #a06f7b;
+}
+
+.brand span {
+  color: #dc143c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #dc143c;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Main Content */
+.page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro h1,
+.bio h2,
+.faq-section h1,
+.patterns-section h1 {
+  margin-bottom: 1rem;
+  color: #a0522d;
+}
+
+.intro p,
+.bio-text p,
+.patterns-section p,
+.faq p {
+  margin-bottom: 1.2rem;
+}
+
+/* Bio Section */
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.bio-container img {
+  max-width: 280px;
+  border-radius: 12px;
+}
+
+.bio-text {
+  flex: 1;
+}
+
+/* Shop Grid */
+.product-grid,
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card,
+.pattern-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background: #fffafc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-card h3,
+.pattern-card h3 {
+  color: #8b0000;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 275px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #dc143c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a0002c;
+}
+
+/* FAQ */
+.faq h3 {
+  color: #6a1b1b;
+  margin-top: 1.5rem;
+}
+
+.faq p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #fff0f5;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #e0c0d0;
+}
+
+/* Pattern page note */
+.note {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+/* Soft pastel link colors to match Lambspun theme */
+a {
+  color: #c27ba0; /* Dusty rose / soft mauve */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #a0668c; /* Slightly deeper mauve */
+}
+
+a:hover,
+a:focus {
+  color: #d88fb4; /* Lighter on hover */
+  text-decoration: underline;
+}
+
+a:active {
+  color: #b85286;
+}

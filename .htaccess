@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# --- Force HTTPS (disabled for ngrok testing) ---
+#RewriteCond %{HTTPS} off
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# --- Redirect Free Subdomain to Custom Domain ---
+RewriteCond %{HTTP_HOST} ^lambspun\.infinityfree\.me$ [NC]
+RewriteRule ^(.*)$ https://lambspunflorals.com/$1 [L,R=301]
+
+# --- Optional: Enable Pretty URLs (remove .php from URLs) ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+# --- Optional: Basic security headers ---
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

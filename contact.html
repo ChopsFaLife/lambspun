@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Lambspun Florals</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Whether you have a question, a custom order idea, or just want to say hi — reach out below.</p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:sarahasheighc@gmail.com">sarahasheighc@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:4792060931">479-206-0931</a></p>
+        <p><strong>Location:</strong> Arkansas, USA</p>
+      </div>
+
+      <form action="mailto:sarahasheighc@gmail.com" method="post" enctype="text/plain" class="contact-form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+
+        <input type="submit" value="Send Message" />
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

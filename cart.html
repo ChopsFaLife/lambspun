@@ -1,0 +1,93 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - Lambspun Florals</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+        <a href="cart.html" class="active">Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Your Cart</h1>
+    <section class="cart-container">
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <strong>Total:</strong> $<span id="cart-total">0.00</span>
+      </div>
+      <div id="paypal-button-container"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <button class="floating-cart" onclick="window.location.href='cart.html'">🛒</button>
+
+  <script>
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+
+    function renderCart() {
+      let total = 0;
+      cartItemsContainer.innerHTML = '';
+      cartItems.forEach((item, index) => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+        itemElement.innerHTML = `
+          <strong>${item.name}</strong><br>
+          Quantity: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"> — 
+          $${(item.price * item.quantity).toFixed(2)}
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        total += item.price * item.quantity;
+        cartItemsContainer.appendChild(itemElement);
+      });
+      cartTotalElement.textContent = total.toFixed(2);
+    }
+
+    function updateQuantity(index, qty) {
+      cartItems[index].quantity = parseInt(qty);
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      renderCart();
+    }
+
+    renderCart();
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: cartTotalElement.textContent
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(fu

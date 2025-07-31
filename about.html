@@ -1,0 +1,54 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Lambspun Florals</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+		<a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <h1>About Lambspun Florals</h1>
+      <p>Every petal tells a story. Handcrafted by Sarah Lamb in Arkansas, Lambspun Florals delivers timeless crochet arrangements made with care, tradition, and heart.</p>
+    </section>
+
+    <section class="bio">
+      <h2>Meet the Artist</h2>
+      <div class="bio-container">
+        <img src="images/horrorcon-booth.jpg" alt="Sarah Lamb at HorrorCon">
+        <div class="bio-text">
+          <p>Sarah Lamb has been crocheting since childhood. Born in Australia and raised in Canada, she now calls Arkansas home. Her unique blend of pattern design and floral imagination brought Lambspun Florals to life. Each piece is created with vintage charm, modern elegance, and a love for enduring beauty.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

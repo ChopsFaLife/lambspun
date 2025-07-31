@@ -1,0 +1,59 @@
+<!-- patterns.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patterns - Lambspun Florals</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/banner-lambspun.png" alt="Lambspun Florals Banner" class="banner" />
+    <nav class="site-header">
+      <div class="brand"><a href="index.html">Lambspun <span>Florals</span></a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="about.html">About</a>
+        <a href="patterns.html">Patterns</a>
+		<a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="patterns-section">
+      <h1>Crochet Patterns by Sarah Lamb</h1>
+      <p>Want to create your own timeless florals? Sarah offers digital downloads of her original patterns so you can follow along and make your own crochet roses and lavender bundles at home.</p>
+
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <h3>Classic Crochet Rose</h3>
+          <p>Step-by-step digital pattern for creating the signature Lambspun rose.</p>
+          <a href="#" class="btn">Coming Soon</a>
+        </div>
+        <div class="pattern-card">
+          <h3>Lavender Bundle Pattern</h3>
+          <p>Detailed instructions for crafting your own bundle of soft yarn lavender stems.</p>
+          <a href="#" class="btn">Coming Soon</a>
+        </div>
+      </div>
+
+      <p class="note">Sign up on the contact page to get notified when patterns are available for download.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Lambspun Florals. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
